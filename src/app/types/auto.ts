@@ -1,4 +1,4 @@
-export interface Auto {
+export interface DataAuto {
   id: number;
   brand: string;
   model: string;

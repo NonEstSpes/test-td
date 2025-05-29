@@ -1,8 +1,9 @@
 <div tuiCardMedium class="microsoft">
+  @let auto = auto$$();
   <h2 tuiTitle>
-    BMV
-    <span tuiSubtitle>5-SERIES</span>
+    {{auto.brand}}
+    <span tuiSubtitle>{{auto.model}}</span>
   </h2>
   <img src="/images/39293871_001-thumb.jpg" width="240px" height="240px"/>
-  <tui-badge class="money">2 300 000 P.</tui-badge>
+  <tui-badge class="money">{{auto.price + ' P.'}}</tui-badge>
 </div>

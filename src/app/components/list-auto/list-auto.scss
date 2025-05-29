@@ -1,0 +1,14 @@
+.item {
+  padding: 1rem;
+  border: 1px solid var(--tui-border-normal);
+  border-radius: 1rem;
+  margin-bottom: auto;
+}
+
+.list {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
