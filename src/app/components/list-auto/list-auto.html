@@ -1,25 +1,20 @@
-@let listAuto = autoService.listAuto | async;
-@if (listAuto) {
-  <div class="list">
-    <tui-carousel
-      [itemsCount]="3"
-      [(index)]="index"
-    >
-      @for (auto of listAuto; track auto.id) {
-        <ng-container>
-          <div *tuiItem>
-            <app-item-auto [auto]="auto"/>
-          </div>
-        </ng-container>
-      }
-    </tui-carousel>
-    <tui-pagination
-      size="s"
-      class="tui-space_top-4"
-      [index]="rounded"
-      [length]="listAuto.length / itemsCount"
-      (indexChange)="onIndex($event)"
-    />
-  </div>
+@let listAuto = autoService.listAuto | async; @if (listAuto) {
+<div class="list">
+  <tui-carousel [itemsCount]="3" [(index)]="index">
+    @for (auto of listAuto; track auto.id) {
+    <ng-container>
+      <div *tuiItem>
+        <app-item-auto [auto]="auto" (click)="showCalculator(auto.price)" />
+      </div>
+    </ng-container>
+    }
+  </tui-carousel>
+  <tui-pagination
+    size="s"
+    class="tui-space_top-4"
+    [index]="rounded"
+    [length]="listAuto.length / itemsCount"
+    (indexChange)="onIndex($event)"
+  />
+</div>
 }
-

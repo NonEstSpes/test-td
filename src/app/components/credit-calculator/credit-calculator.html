@@ -1,1 +1,15 @@
-<p>credit-calculator works!</p>
+<div>
+  <form [formGroup]="creditForm">
+    <tui-textfield>
+      <label tuiLabel>Rate your mind</label>
+
+      <input
+        tuiInputSlider
+        [max]="max"
+        [min]="min"
+        formControlName="initialPayment"
+      />
+      <input tuiSlider type="range" [segments]="5" [step]="step" />
+    </tui-textfield>
+  </form>
+</div>

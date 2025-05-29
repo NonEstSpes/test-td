@@ -1,8 +1,13 @@
-import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/core';
-import {TuiAppearance, TuiTitle} from '@taiga-ui/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  input,
+  InputSignal,
+} from '@angular/core';
+import { TuiAppearance, TuiTitle } from '@taiga-ui/core';
 import { TuiCardMedium } from '@taiga-ui/layout';
 import { TuiBadge } from '@taiga-ui/kit';
-import {DataAuto} from '../../../types/auto';
+import { DataAuto } from '../../../types/auto';
 
 @Component({
   selector: 'app-item-auto',
@@ -14,5 +19,5 @@ import {DataAuto} from '../../../types/auto';
 export class ItemAuto {
   auto$$: InputSignal<DataAuto> = input.required({
     alias: 'auto',
-  })
+  });
 }
