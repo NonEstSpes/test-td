@@ -6,42 +6,42 @@
         "id": 0,
         "brand": "bmv",
         "model": "5-series",
-        "img_url": "https://seoul.japantransit.ru/37047390/39593049_001.jpg",
+        "img_url": "39593049_001.webp",
         "price": 2473000
       },
       {
         "id": 1,
         "brand": "bmv",
         "model": "1-series",
-        "img_url": "https://seoul.japantransit.ru/36182285/conversions/39430873_003-thumb.jpg",
+        "img_url": "39430873_003-thumb.jpg",
         "price": 1991000
       },
       {
         "id": 2,
         "brand": "bmv",
         "model": "3-series",
-        "img_url": "https://seoul.japantransit.ru/35911162/conversions/39162970_001-thumb.jpg",
+        "img_url": "39162970_001-thumb.jpg",
         "price": 2509000
       },
       {
         "id": 3,
         "brand": "mazda",
         "model": "mazda-3",
-        "img_url": "https://seoul.japantransit.ru/32694248/38751770_001.jpg",
+        "img_url": "38751770_001.webp",
         "price": 1673000
       },
       {
         "id": 4,
         "brand": "mazda",
         "model": "mx-5 miata",
-        "img_url": "https://seoul.japantransit.ru/35633429/conversions/39293871_001-thumb.jpg",
+        "img_url": "39293871_001-thumb.jpg",
         "price": 3349000
       },
       {
         "id": 5,
         "brand": "audi",
         "model": "a6",
-        "img_url": "https://seoul.japantransit.ru/35542109/conversions/39309056_001-thumb.jpg",
+        "img_url": "39309056_001-thumb.jpg",
         "price": 2172000
       }
     ]

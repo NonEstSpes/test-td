@@ -1,8 +1,7 @@
-<div>
+<div class="credit-calculator">
   <form [formGroup]="creditForm">
     <tui-textfield>
-      <label tuiLabel>Rate your mind</label>
-
+      <label tuiLabel>Первоначальный взнос</label>
       <input
         tuiInputSlider
         [max]="max"
@@ -11,5 +10,52 @@
       />
       <input tuiSlider type="range" [segments]="5" [step]="step" />
     </tui-textfield>
+
+    <tui-textfield>
+      <label tuiLabel>Готов платить в месяц</label>
+      <input
+        tuiInputSlider
+        [max]="30000"
+        [min]="1000"
+        formControlName="monthlyFee"
+      />
+      <input tuiSlider type="range" [segments]="5" [step]="1000" />
+    </tui-textfield>
+
+    <tui-textfield>
+      <label tuiLabel>Срок кредита (месяцев)</label>
+      <input
+        tuiInputSlider
+        [max]="360"
+        [min]="12"
+        formControlName="creditTerm"
+      />
+      <input tuiSlider type="range" [segments]="5" [step]="12" />
+    </tui-textfield>
   </form>
+  <div>
+    <label tuiLabel>
+      <span tuiTitle>
+        Процентная ставка
+        <span tuiSubtitle
+          >{{ (this.interestRate$$() * 100 | number: '1.2-2') + '%'}}</span
+        >
+      </span>
+    </label>
+    <label tuiLabel>
+      <span tuiTitle>
+        Срок кредита
+        <span tuiSubtitle
+          >{{ (creditForm.value?.creditTerm || 0) / 12 | yearsDeclension }}</span
+        >
+      </span>
+    </label>
+  </div>
+  <button tuiButton type="button" (click)="showNotification(template)">Отправить заявку</button>
 </div>
+
+<ng-template #template>
+  <div>
+    <p>Заявка успешно отправлена</p>
+  </div>
+</ng-template>
